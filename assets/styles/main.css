@@ -1,5 +1,6 @@
 section h2 {
     color: dodgerblue;
+    text-shadow: 2px 2px black;
 }
 
 div > p {
@@ -21,6 +22,61 @@ div + p {
 .flex-1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background: linear-gradient(seagreen, mintcream);
+    height: 200px;
+    width: 100%;
+}
+
+.flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+}
+
+p:nth-child(2) {
+    background: peru;
+}
+
+.flex-3 {
+    display: flex; 
     justify-content: center;
-    
+    align-items: center;
+    height: 300px;
+    width: 100vw;
+    border: 1px solid black;
+    animation-name: change;
+    animation-duration: 2s;
+    background: orchid;
+    transition: width 2s;
+}
+
+input[type="text"]:disabled {
+    background: purple;
+}
+
+.focus:focus {
+    background-color: tomato;
+    width: 300px;
+}
+
+.rotated {
+    transform: rotate(45deg);
+    font-size: 45px;
+    color: black;
+    text-align: center;    
+}
+
+@keyframes change {
+    0% {background-color: green;}
+    50% {background-color: yellow;}
+}
+
+
+@media screen and (min-width: 900px) {
+    .kitty {
+        width: 50%;
+        height: 50%;
+        box-shadow: 0 0 1em black;
+    }
 }
